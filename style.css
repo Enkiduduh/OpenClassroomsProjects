@@ -11,7 +11,7 @@ body {
 	background : darkgray;
 }
 .fa-solid {
-	padding-right: 10px;
+	padding-right: 20px;
 }
 
 .main-container {
@@ -99,13 +99,16 @@ header {
 .fonctionnement-step {
 	display: flex;
 	align-items: center;
-	width: 100%;
+  width: 97%;
+  height: 40px;
 	background: whitesmoke;
 	border-radius: 25px;
 	padding: 20px 0px;
 	margin: 15px auto;
 	font-weight: bold;
 	font-size: 16px;
+  position: relative;
+  left: 4px;
 }
 
 .fonctionnement-step > span {
@@ -114,6 +117,18 @@ header {
 	border-radius: 50px;
 	color: white;
 	background: rgba(147, 86, 220, 1);
+  position: absolute;
+  left: -10px;
+}
+
+.fonctionnement-step > i {
+  position: absolute;
+  left: 50px;
+}
+
+.fonctionnement-step > p {
+  position: absolute;
+  left: 90px;
 }
 
 /**************  FOOTER  **************/
