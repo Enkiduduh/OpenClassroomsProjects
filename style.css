@@ -87,13 +87,18 @@ header {
 	}
 /**************  MAIN  **************/
 
+/** Fonctionnement **/
 .fonctionnement {
 	padding: 50px 20px;
 	background: white;
 }
-.Restaurants {
-	padding: 50px 20px;
-	background: whitesmoke;
+
+.fonctionnement > p {
+	font-weight: bold;
+	font-size: 26px;
+	padding: 0 0 20px 0;
+  margin: 0 0;
+  text-align: left;
 }
 
 .fonctionnement-step {
@@ -129,6 +134,48 @@ header {
 .fonctionnement-step > p {
   position: absolute;
   left: 90px;
+}
+
+/** Restaurants **/
+.restaurants {
+	padding: 50px 20px;
+	background: whitesmoke;
+}
+
+.restaurants > p {
+	font-weight: bold;
+	font-size: 26px;
+	padding: 0 0 20px 0;
+  margin: 0 0;
+  text-align: left;
+}
+.card-content {
+  border: 1px solid orange;
+  background: blueviolet;
+  border-bottom-left-radius: 25px ;
+  border-bottom-right-radius:25px ;
+}
+.card-img > img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 25px ;
+  border-top-right-radius:25px ;
+}
+
+.card-infos {
+  display:flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.card-name > p {
+  font-size: 18px;
+  font-weight: 700;
+}
+.card-name > span {
+  font-size: 17px;
+  font-weight: 300;
 }
 
 /**************  FOOTER  **************/
