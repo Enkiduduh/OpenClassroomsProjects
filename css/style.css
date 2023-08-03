@@ -1,3 +1,39 @@
+body {
+  background: darkgray;
+}
 
+.main-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
 
-/*# sourceMappingURL=style.css.map */
+h1, h2, h4, h5 {
+  font-family: "Shrikhand", cursive;
+}
+
+h3, p, span {
+  font-family: "Roboto", sans-serif;
+}
+
+footer {
+  background: #353535;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  text-align: left;
+}
+footer .footer-section > h5 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 10px 0px;
+}
+footer .footer-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer-link > p {
+  margin: 7px 0 7px 0;
+}/*# sourceMappingURL=style.css.map */
