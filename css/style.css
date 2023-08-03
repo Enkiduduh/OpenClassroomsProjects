@@ -242,6 +242,8 @@ h3, p, span {
 .dish-name span {
   margin: 0;
   padding: 3px 10px;
+  font-weight: 300;
+  font-size: 15px;
 }
 
 .price {
