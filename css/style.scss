@@ -16,6 +16,9 @@ h3, p, span {
 	font-family: $font-stack-secondary;
 }
 
+.fa-solid {
+	padding-right: 20px;
+}
 
 .main-container {
 	max-width: 450px;
@@ -29,18 +32,18 @@ h3, p, span {
 	background: whitesmoke;
 	border-bottom: 3px solid rgba(0, 0, 0, 0.15);
   text-align: center;
-  @include d-flex;
+  @include d-flex-center;
 
-}
-.header-title > img {
-  width: 220px;
-  height: 50px;
-}
-.header-title > h1 {
-	margin: $margin-center;
+    img {
+      width: 220px;
+      height: 50px;
+  }
+    h1 {
+      margin: $margin-center;
+  }
 }
 .header-location {
-  @include d-flex;
+  @include d-flex-center;
 	background: rgba(234, 234, 234, 1);
 }
 .header-location > p {
@@ -59,22 +62,23 @@ h3, p, span {
 	font-size: 26px;
 	padding: 0 40px;
   text-align: center;
+
+    p {
+      margin: 10px auto;
+  }
 }
 
 .header-infos-2 {
 	font-weight: 300;
 	font-size: 18px;
   text-align: center;
-}
-.header-infos-1 > p {
-	margin: 10px auto;
+
+    p {
+      margin: $margin-center;
+  }
 }
 
-.header-infos-2 > p {
-	margin: $margin-center;
-}
-
-.button-navigation {
+.btn-navigation {
 	border-radius: 25px;
 	border: 1px solid white;
 	color: white;
@@ -82,7 +86,7 @@ h3, p, span {
   text-align: center;
 	margin: 30px auto 20px auto ;
 	font-weight: bold;
-	box-shadow: 0 3px 10px #000000;
+  @include d-shadow;
 	background: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%);
 	}
 
@@ -92,56 +96,60 @@ h3, p, span {
 /****** Fonctionnement *******/
 .fonctionnement {
 	padding: 50px 20px;
-	background: white;
-}
+	background: $secondary-color;
 
+}
 .fonctionnement > p {
-	font-weight: bold;
-	font-size: 26px;
-	padding: 0 0 20px 0;
+  font-weight: bold;
+  font-size: $font-size-title;
+  padding: 0 0 20px 0;
   margin: 0 0;
   text-align: left;
 }
 
 .fonctionnement-step {
-	display: flex;
-	align-items: center;
+	@include d-flex;
   width: 97%;
   height: 40px;
-	background: whitesmoke;
+	background: $bgd-color-primary;
 	border-radius: 25px;
 	padding: 20px 0px;
-	margin: 15px auto;
+	margin: 20px auto;
 	font-weight: bold;
 	font-size: 16px;
   position: relative;
   left: 4px;
+  @include d-shadow;
+  span {
+    padding: 5px 10px;
+    margin-right: 20px;
+    border-radius: 50px;
+    color: $secondary-color;
+    background: $tertiary-color;
+    position: absolute;
+    left: -10px;
+ }
+    i {
+      position: absolute;
+      left: 50px;
+}
+  p {
+    position: absolute;
+    left: 90px;
+}
 }
 
-.fonctionnement-step > span {
-	padding: 5px 10px;
-	margin-right: 20px;
-	border-radius: 50px;
-	color: white;
-	background: rgba(147, 86, 220, 1);
-  position: absolute;
-  left: -10px;
-}
 
-.fonctionnement-step > i {
-  position: absolute;
-  left: 50px;
-}
 
-.fonctionnement-step > p {
-  position: absolute;
-  left: 90px;
-}
 
 /******** Restaurants ********/
 .restaurants {
 	padding: 50px 20px;
-	background: whitesmoke;
+	background: $bgd-color-primary;
+    a {
+      text-decoration: none;
+      color: $primary-color;
+    }
 }
 
 .restaurants > p {
@@ -152,35 +160,38 @@ h3, p, span {
   text-align: left;
 }
 .card-content {
-
   border-bottom-left-radius: 25px ;
   border-bottom-right-radius:25px ;
   background: white;
   margin: 0 0 20px 0;
+  text-decoration: none;
 }
-.card-img > img {
-  width: 100%;
-  height: 200px;
-  border-top-left-radius: 25px ;
-  border-top-right-radius:25px ;
+.card-img {
+  img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 25px ;
+    border-top-right-radius:25px ;
+  }
 }
 
 .card-infos {
-  display:flex;
+  @include d-flex;
   justify-content: space-between;
   padding: 20px 20px;
-  align-items: center;
 }
 
-.card-name > p {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0;
-}
-.card-name > span {
-  font-size: 17px;
-  font-weight: 300;
-  text-align: left;
+.card-name {
+  p {
+    font-size: $font-size-text-1;
+    font-weight: 700;
+    margin: 0;
+  }
+  span {
+    font-size: $font-size-text-2;
+    font-weight: 300;
+    text-align: left;
+  }
 }
 
 
@@ -191,9 +202,36 @@ h3, p, span {
 }
 .page-restaurant {
   padding: 20px 20px;
-  background: whitesmoke;
+  background: $bgd-color-primary;
 }
+.dish-info {
+  @include d-flex;
+  @include d-shadow;
+  justify-content: space-between;
+  padding: 10px 10px;
+  background: $secondary-color;
+  border-radius: 15px;
+}
+.dish-name {
+  @include d-flex-column;
+    p {
+      font-weight: bold;
+      margin: 0;
+      padding: 3px 10px;
+    }
+    span {
+      margin: 0;
+      padding: 3px 10px;
+    }
+}
+.price {
+  font-size : $font-size-text-4;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
 
+}
 
 
 

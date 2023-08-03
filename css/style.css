@@ -10,6 +10,10 @@ h3, p, span {
   font-family: "Roboto", sans-serif;
 }
 
+.fa-solid {
+  padding-right: 20px;
+}
+
 .main-container {
   max-width: 450px;
   margin: 0 auto;
@@ -25,13 +29,11 @@ h3, p, span {
   align-items: center;
   justify-content: center;
 }
-
-.header-title > img {
+.header-title img {
   width: 220px;
   height: 50px;
 }
-
-.header-title > h1 {
+.header-title h1 {
   margin: 0 auto;
 }
 
@@ -60,22 +62,20 @@ h3, p, span {
   padding: 0 40px;
   text-align: center;
 }
+.header-infos-1 p {
+  margin: 10px auto;
+}
 
 .header-infos-2 {
   font-weight: 300;
   font-size: 18px;
   text-align: center;
 }
-
-.header-infos-1 > p {
-  margin: 10px auto;
-}
-
-.header-infos-2 > p {
+.header-infos-2 p {
   margin: 0 auto;
 }
 
-.button-navigation {
+.btn-navigation {
   border-radius: 25px;
   border: 1px solid white;
   color: white;
@@ -83,7 +83,7 @@ h3, p, span {
   text-align: center;
   margin: 30px auto 20px auto;
   font-weight: bold;
-  box-shadow: 0 3px 10px #000000;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   background: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
 }
 
@@ -107,17 +107,17 @@ h3, p, span {
   align-items: center;
   width: 97%;
   height: 40px;
-  background: whitesmoke;
+  background: #f6f6f6;
   border-radius: 25px;
   padding: 20px 0px;
-  margin: 15px auto;
+  margin: 20px auto;
   font-weight: bold;
   font-size: 16px;
   position: relative;
   left: 4px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
-.fonctionnement-step > span {
+.fonctionnement-step span {
   padding: 5px 10px;
   margin-right: 20px;
   border-radius: 50px;
@@ -126,13 +126,11 @@ h3, p, span {
   position: absolute;
   left: -10px;
 }
-
-.fonctionnement-step > i {
+.fonctionnement-step i {
   position: absolute;
   left: 50px;
 }
-
-.fonctionnement-step > p {
+.fonctionnement-step p {
   position: absolute;
   left: 90px;
 }
@@ -140,7 +138,11 @@ h3, p, span {
 /******** Restaurants ********/
 .restaurants {
   padding: 50px 20px;
-  background: whitesmoke;
+  background: #f6f6f6;
+}
+.restaurants a {
+  text-decoration: none;
+  color: black;
 }
 
 .restaurants > p {
@@ -156,9 +158,10 @@ h3, p, span {
   border-bottom-right-radius: 25px;
   background: white;
   margin: 0 0 20px 0;
+  text-decoration: none;
 }
 
-.card-img > img {
+.card-img img {
   width: 100%;
   height: 200px;
   border-top-left-radius: 25px;
@@ -167,18 +170,17 @@ h3, p, span {
 
 .card-infos {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 20px 20px;
-  align-items: center;
 }
 
-.card-name > p {
+.card-name p {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
 }
-
-.card-name > span {
+.card-name span {
   font-size: 17px;
   font-weight: 300;
   text-align: left;
@@ -191,7 +193,39 @@ h3, p, span {
 
 .page-restaurant {
   padding: 20px 20px;
-  background: whitesmoke;
+  background: #f6f6f6;
+}
+
+.dish-info {
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  justify-content: space-between;
+  padding: 10px 10px;
+  background: white;
+  border-radius: 15px;
+}
+
+.dish-name {
+  display: flex;
+  flex-direction: column;
+}
+.dish-name p {
+  font-weight: bold;
+  margin: 0;
+  padding: 3px 10px;
+}
+.dish-name span {
+  margin: 0;
+  padding: 3px 10px;
+}
+
+.price {
+  font-size: 15px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
 }
 
 /*----------------FOOTER------------------*/

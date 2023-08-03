@@ -1,0 +1,19 @@
+@mixin d-flex-center {
+  display : flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin d-flex {
+  display : flex;
+  align-items: center;
+}
+
+@mixin d-flex-column {
+  display : flex;
+  flex-direction: column;
+}
+
+@mixin d-shadow {
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
