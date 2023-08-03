@@ -10,3 +10,12 @@ $secondary-color: white;
 $bgd-color-primary: #f6f6f6;
 $bgd-color-secondary: #EAEAEA;
 $bgd-color-footer:#353535;
+
+$margin-center: 0 auto;
+
+
+@mixin d-flex {
+  display : flex;
+  align-items: center;
+  justify-content: center;
+}
