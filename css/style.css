@@ -187,8 +187,13 @@ h3, p, span {
 }
 
 /******** Page de restaurant *********/
-.header-img > img {
-  width: 100%;
+.header-img img {
+  width: 35w;
+  height: 35vh;
+  max-width: 100%;
+  max-height: 400px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .page-restaurant {
@@ -229,6 +234,11 @@ h3, p, span {
   background: white;
   border-radius: 15px;
 }
+.dish-info .hov {
+  display: none;
+  width: 2px;
+  transition: width 2s;
+}
 
 .dish-name {
   display: flex;
@@ -252,6 +262,33 @@ h3, p, span {
   top: 10px;
   right: 10px;
   font-weight: bold;
+}
+
+.dish-info:hover {
+  text-overflow: ellipsis;
+  padding: 0;
+  height: 69px;
+}
+.dish-info:hover .dish-name {
+  position: relative;
+  left: 10px;
+}
+.dish-info:hover .price {
+  position: relative;
+  left: 50px;
+}
+.dish-info:hover .hov {
+  display: block;
+  width: 20px;
+  text-align: center;
+  padding: 25px 20px;
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(153, 226, 208);
+}
+.dish-info:hover .fa-solid {
+  padding-right: 0px;
 }
 
 /*----------------FOOTER------------------*/

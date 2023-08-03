@@ -16,6 +16,8 @@ h3, p, span {
 	font-family: $font-stack-secondary;
 }
 
+
+
 .fa-solid {
 	padding-right: 20px;
 }
@@ -132,13 +134,12 @@ h3, p, span {
     i {
       position: absolute;
       left: 50px;
-}
+  }
   p {
     position: absolute;
     left: 90px;
+  }
 }
-}
-
 
 
 
@@ -197,8 +198,15 @@ h3, p, span {
 
 /******** Page de restaurant *********/
 
-.header-img > img {
-  width : 100%
+.header-img {
+
+  img {
+    width : 35w;
+    height : 35vh;
+    max-width : 100%;
+    max-height : 400px;
+    object-fit: scale-down;
+    }
 }
 .page-restaurant {
   padding: 40px 20px 20px 20px;
@@ -235,6 +243,12 @@ h3, p, span {
   margin: 10px 0;
   background: $secondary-color;
   border-radius: 15px;
+  .hov {
+    display: none;
+    width : 2px;
+    transition: width 2s;
+
+  }
 }
 .dish-name {
   @include d-flex-column;
@@ -249,6 +263,7 @@ h3, p, span {
       font-weight: 300;
       font-size: $font-size-text-4;
     }
+
 }
 .price {
   font-size : $font-size-text-4;
@@ -258,6 +273,35 @@ h3, p, span {
   font-weight: bold;
 
 }
+.dish-info:hover {
+  text-overflow: ellipsis;
+  padding: 0;
+  height: 69px;
+    .dish-name {
+      position:relative;
+      left: 10px;
+    }
+    .price {
+      position:relative;
+      left: 50px;
+    }
+    .hov {
+      display: block;
+      width: 20px;
+      text-align: center;
+      padding: 25px 20px;
+      color: $secondary-color;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background:rgba(153, 226, 208, 1);
+
+
+  }
+  .fa-solid {
+    padding-right: 0px;
+  }
+}
+
 
 
 
