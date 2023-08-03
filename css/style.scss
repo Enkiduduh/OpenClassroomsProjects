@@ -201,14 +201,38 @@ h3, p, span {
   width : 100%
 }
 .page-restaurant {
-  padding: 20px 20px;
+  padding: 40px 20px 20px 20px;
+  margin-top:-60px;
   background: $bgd-color-primary;
+  position:relative;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+   h2 {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 28px;
+   }
+}
+
+.section-dish {
+  margin-bottom: 40px;
+}
+
+.section-dish-title {
+  border-bottom: 3px solid rgba(153, 226, 208, 1);
+  padding-bottom: 0px;
+  width: 40px;
+  margin-bottom: 0;
+    p {
+      margin: 10px 0 5px 0;
+    }
 }
 .dish-info {
   @include d-flex;
   @include d-shadow;
   justify-content: space-between;
   padding: 10px 10px;
+  margin: 10px 0;
   background: $secondary-color;
   border-radius: 15px;
 }

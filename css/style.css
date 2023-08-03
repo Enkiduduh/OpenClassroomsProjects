@@ -192,8 +192,31 @@ h3, p, span {
 }
 
 .page-restaurant {
-  padding: 20px 20px;
+  padding: 40px 20px 20px 20px;
+  margin-top: -60px;
   background: #f6f6f6;
+  position: relative;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.page-restaurant h2 {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 28px;
+}
+
+.section-dish {
+  margin-bottom: 40px;
+}
+
+.section-dish-title {
+  border-bottom: 3px solid rgb(153, 226, 208);
+  padding-bottom: 0px;
+  width: 40px;
+  margin-bottom: 0;
+}
+.section-dish-title p {
+  margin: 10px 0 5px 0;
 }
 
 .dish-info {
@@ -202,6 +225,7 @@ h3, p, span {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   justify-content: space-between;
   padding: 10px 10px;
+  margin: 10px 0;
   background: white;
   border-radius: 15px;
 }
