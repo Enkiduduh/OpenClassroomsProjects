@@ -16,8 +16,6 @@ h3, p, span {
 	font-family: $font-stack-secondary;
 }
 
-
-
 .fa-solid {
 	padding-right: 20px;
 }
@@ -244,10 +242,21 @@ h3, p, span {
   background: $secondary-color;
   border-radius: 15px;
   .hov {
-    display: none;
-    width : 2px;
-    transition: width 2s;
 
+    position:absolute;
+    background: yellow;
+    left: 110%;
+    transition: left 3s transform 3s;
+
+  }
+  .cube {
+    width: 30px;
+
+    height: 30px;
+    background: yellow;
+    position: absolute;
+    left: 100%;
+    transition: left 3s, transform 3s;
   }
 }
 .dish-name {
@@ -285,22 +294,29 @@ h3, p, span {
       position:relative;
       left: 50px;
     }
-    .hov {
+    .hov::nth-child(1) {
       display: block;
-      width: 20px;
       text-align: center;
       padding: 25px 20px;
       color: $secondary-color;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       background:rgba(153, 226, 208, 1);
+      left:90%;
+      transform: translateX(-100%);
+    }
+    .cube {
+      display: block;
+      left: 90%;
+	transform: translateX(-100%);
+    }
 
 
   }
   .fa-solid {
     padding-right: 0px;
   }
-}
+
 
 
 
