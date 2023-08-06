@@ -77,14 +77,21 @@ h3, p, span {
 
 .btn-navigation {
   border-radius: 25px;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   width: 60%;
   text-align: center;
   margin: 30px auto 20px auto;
   font-weight: bold;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  background: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
+  transition: opacity 2s ease;
+  background-image: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
+  opacity: 1;
+}
+.btn-navigation:hover {
+  opacity: 0.5;
+  background-image: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 /**************  MAIN  **************/
@@ -186,14 +193,47 @@ h3, p, span {
   text-align: left;
 }
 
+.fa-heart {
+  color: rgb(208, 208, 208);
+  opacity: 0.5;
+  transition: color 2s ease;
+}
+.fa-heart:hover {
+  color: #FF79DA;
+  opacity: 1;
+}
+
 /******** Page de restaurant *********/
+.header-title2 {
+  padding: 10px 0;
+  background: whitesmoke;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-title2 img {
+  width: 220px;
+  height: 50px;
+  left: -20px;
+  position: relative;
+}
+.header-title2 h1 {
+  margin: 0 auto;
+}
+.header-title2 .fa-arrow-left {
+  position: relative;
+  left: -70px;
+}
+
+.header-img {
+  overflow: hidden;
+  width: 100%;
+}
 .header-img img {
-  width: 35w;
-  height: 35vh;
-  max-width: 100%;
-  max-height: 400px;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  width: 100%;
+  max-height: 300px;
 }
 
 .page-restaurant {
