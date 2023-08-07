@@ -17,3 +17,60 @@
 @mixin d-shadow {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
+
+
+@mixin card {
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin: 10px 0;
+    background: $secondary-color;
+    border-radius: 15px;
+    overflow: hidden;
+
+    .cube {
+      position: absolute;
+      left: 100%;
+      top: 0px;
+      transition: left 330ms, transform 330ms;
+      transition-timing-function: linear;
+      display: inline-block;
+      align-items: center;
+      padding: 25px 20px;
+      color: $secondary-color;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background:rgba(153, 226, 208, 1);
+    }
+    &:hover {
+      text-overflow: ellipsis;
+      padding: 0;
+      height: 69px;
+        .dish-name {
+          position:relative;
+
+          left: 10px;
+        }
+        .price {
+          position:relative;
+          left: -40px;
+          transform: translateX(-100%);
+        }
+
+        .cube {
+          display: inline-block;
+          align-items: center;
+          padding: 25px 20px;
+          color: $secondary-color;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          background:rgba(153, 226, 208, 1);
+          left: 100%;
+          transform: translateX(-100%);
+
+        }
+
+        .move {
+          @include d-flex;
+        }
+  }
+}

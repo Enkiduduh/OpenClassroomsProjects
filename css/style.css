@@ -15,7 +15,7 @@ h3, p, span {
 }
 
 .main-container {
-  max-width: 450px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -369,4 +369,79 @@ footer .footer-link {
 }
 footer .footer-link > p {
   margin: 7px 0 7px 0;
+}
+
+/* version responsive  */
+/* Desktop superior than 768px) */
+@media (min-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .main-container {
+    width: 100%;
+    background: white;
+  }
+  .header-title2 .fa-arrow-left {
+    position: absolute;
+    left: 40px;
+  }
+  .page-restaurant {
+    padding: 40px 20px 20px 20px;
+    width: 70%;
+    margin: -40px auto 0 auto;
+    background: #f6f6f6;
+    position: relative;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .page-restaurant h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 28px;
+  }
+  .section-dish {
+    margin: 0 auto 40px auto;
+    width: 70%;
+  }
+  .section-dish-title {
+    border-bottom: 3px solid rgb(153, 226, 208);
+    width: 40px;
+  }
+  .dish-info {
+    width: 100%;
+    margin: 10px auto;
+  }
+  /*----------------FOOTER------------------*/
+  footer {
+    background: #353535;
+    color: white;
+    padding: 50px 40px 20px 40px;
+  }
+  footer .footer-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  footer .footer-section h5 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 10px 0px;
+    padding-right: 40px;
+    position: absolute;
+    left: 90%;
+  }
+  footer .footer-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 10px;
+    position: relative;
+    left: 40%;
+  }
+  footer .footer-link p {
+    margin: 7px 0 7px 0;
+  }
 }/*# sourceMappingURL=style.css.map */
