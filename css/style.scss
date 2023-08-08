@@ -9,11 +9,11 @@
   }
 
 
-   h2, h4, h5 {
+  h4, h5 {
     font-family: $font-stack-primary;
   }
 
-  h1, h3, p, span {
+  h1, h2, h3, p, span {
     font-family: $font-stack-secondary;
   }
 
@@ -86,7 +86,7 @@
     border-radius: 25px;
     border: 2px solid $secondary-color;
     color: white;
-    width: 60%;
+    width: 250px;
     text-align: center;
     margin: 30px auto 20px auto ;
     font-weight: bold;
@@ -361,20 +361,241 @@
 
 
 /*************** version responsive  **********/
-/* Desktop superior than 768px) */
-@media screen and (min-width: 768px)  {
+
+/* Medium Version Tablette superior than 767,98px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main-container {
+    background: $secondary-color;
+  }
+  .page-restaurant {
+    padding: 40px 20px 20px 20px;
+    width: 90%;
+
+    margin: -40px auto 0 auto;
+    background: $bgd-color-primary;
+    position:relative;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+     h2 {
+      text-align: center;
+      padding-bottom: 20px;
+      font-size: 28px;
+     }
+  }
+  .page-restaurant-title {
+    width: 90%;
+
+  }
+  .section-dish {
+    margin: 0 auto 40px auto;
+    width: 90%;
+
+  }
+
+  .section-dish-title {
+    border-bottom: 3px solid rgba(153, 226, 208, 1);
+    width: 40px;
+
+  }
+  .dish-info {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+}
+
+/* Notebook version superior than 1023px) */
+@media screen and (min-width: 1024px)  {
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .main-container {
+    width: 100%;
+    background: $secondary-color;
+  }
+
+  .header-title2 {
+      .fa-arrow-left {
+        position:absolute;
+        left:40px;
+
+    }
+  }
+
+  .btn-navigation {
+     width: 250px;
+    }
+
+  .fonctionnement {
+    padding: 50px 10% 30px 10%;
+
+      .fonctionnement-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+  }
+  .fonctionnement-flex {
+    @include d-flex;
+
+    max-width:1200px;
+    margin: 0 ;
+      .fonctionnement-step {
+        height: 80px;
+        width:31%;
+      }
+  }
+
+  .header-img {
+    img {
+      max-height : 400px;
+      object-fit: cover;
+      }
+  }
+  .restaurants {
+    padding: 30px 5%;
+    width: 100%;
+  }
+
+  .restaurant-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .restaurants-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  .card-content {
+    width: 450px;
+    margin: 10px 0;
+
+    .card-img {
+      img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+      }
+    }
+
+    .card-infos {
+      padding: 10px 20px;
+
+      .card-name {
+        p {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+
+
+  .page-restaurant {
+    padding: 40px 20px 20px 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: -40px auto 0 auto;
+    background: $bgd-color-primary;
+    position:relative;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+     h2 {
+      text-align: center;
+      font-size: 28px;
+      padding-right: 20px;
+     }
+  }
+  .page-restaurant-title {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .section-dish {
+    margin: 0 auto 40px auto;
+    width: 90%;
+
+  }
+
+  .section-dish-title {
+    border-bottom: 3px solid rgba(153, 226, 208, 1);
+    width: 40px;
+
+  }
+  .dish-info {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+
+  /*----------------FOOTER------------------*/
+
+footer {
+  background: $bgd-color-footer;
+  color: $secondary-color;
+  padding: 50px 40px 20px 40px;
+
+  .footer-section {
+    @include d-flex;
+    width:100%;
+
+    h5 {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      margin: 10px 0px;
+      padding-right:40px;
+      position: absolute;
+      left: 90%;
+    }
+
+  }
+
+  .footer-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 10px;
+    position: relative;
+    left: 40%;
+
+    p {
+      margin: 7px 0 7px 0;
+    }
+  }
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop superior than 1400px) */
+/*
+@media screen and (min-width: 1400px)  {
 
     * {
-
       box-sizing: border-box;
     }
 
     .main-container {
       width: 100%;
       background: $secondary-color;
-
     }
-
 
     .header-title2 {
         .fa-arrow-left {
@@ -390,16 +611,20 @@
 
     .fonctionnement {
       padding: 50px 15% 30px 15%;
-      &:first-child {
-        padding-left: 15%;
+
+        .fonctionnement-wrapper {
+          max-width: 1000px;
+          margin: 0 auto;
       }
     }
     .fonctionnement-flex {
       @include d-flex;
+
       max-width:1200px;
-      margin: 0 auto;
+      margin: 0 ;
         .fonctionnement-step {
-          height: 50px;
+          height: 80px;
+          width:31%;
         }
     }
 
@@ -415,7 +640,7 @@
     }
 
     .restaurant-wrapper {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -449,7 +674,6 @@
         }
       }
     }
-
 
 
     .page-restaurant {
@@ -489,7 +713,7 @@
 
 
     /*----------------FOOTER------------------*/
-
+/*
   footer {
     background: $bgd-color-footer;
     color: $secondary-color;
@@ -526,3 +750,4 @@
 
   }
 }
+*/
