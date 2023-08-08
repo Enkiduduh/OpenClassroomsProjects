@@ -9,11 +9,11 @@
   }
 
 
-  h1, h2, h4, h5 {
+   h2, h4, h5 {
     font-family: $font-stack-primary;
   }
 
-  h3, p, span {
+  h1, h3, p, span {
     font-family: $font-stack-secondary;
   }
 
@@ -164,12 +164,22 @@
       }
   }
 
-  .restaurants > p {
-    font-weight: bold;
-    font-size: 26px;
-    padding: 0 0 20px 0;
-    margin: 0 0;
-    text-align: left;
+  .restaurants {
+      p {
+      font-weight: bold;
+      font-size: 26px;
+      padding: 0 0 20px 0;
+      margin: 0 0;
+      text-align: left;
+    }
+  }
+
+  .page-restaurant-title {
+    @include d-flex-center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
   }
   .card-content {
     border-radius: 25px ;
@@ -264,7 +274,6 @@
     border-top-right-radius: 25px;
      h2 {
       margin: 0;
-      padding-bottom: 20px;
       font-size: 28px;
      }
   }
@@ -356,8 +365,7 @@
 @media screen and (min-width: 768px)  {
 
     * {
-      margin: 0;
-      padding: 0;
+
       box-sizing: border-box;
     }
 
@@ -376,11 +384,20 @@
       }
     }
 
+    .btn-navigation {
+       width: 250px;
+      }
+
     .fonctionnement {
-      padding: 50px 150px 30px 150px;
+      padding: 50px 15% 30px 15%;
+      &:first-child {
+        padding-left: 15%;
+      }
     }
     .fonctionnement-flex {
       @include d-flex;
+      max-width:1200px;
+      margin: 0 auto;
         .fonctionnement-step {
           height: 50px;
         }
@@ -393,8 +410,15 @@
         }
     }
     .restaurants {
-      padding: 30px 150px;
+      padding: 30px 15%;
+      width: 100%;
     }
+
+    .restaurant-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
     .restaurants-cards {
       display: flex;
       flex-wrap: wrap;
@@ -404,12 +428,34 @@
     .card-content {
       width: 450px;
       margin: 10px 0;
+
+      .card-img {
+        img {
+          width: 100%;
+          height: 160px;
+          object-fit: cover;
+          border-top-right-radius: 25px;
+          border-top-left-radius: 25px;
+        }
+      }
+
+      .card-infos {
+        padding: 10px 20px;
+
+        .card-name {
+          p {
+            padding-bottom: 5px;
+          }
+        }
+      }
     }
+
 
 
     .page-restaurant {
       padding: 40px 20px 20px 20px;
       width: 70%;
+      max-width: 1200px;
       margin: -40px auto 0 auto;
       background: $bgd-color-primary;
       position:relative;
@@ -421,7 +467,10 @@
         font-size: 28px;
        }
     }
+    .page-restaurant-title {
+      width: 70%;
 
+    }
     .section-dish {
       margin: 0 auto 40px auto;
       width: 70%;
