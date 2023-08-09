@@ -29,8 +29,8 @@ h1, h2, h3, p, span {
   justify-content: center;
 }
 .header-title img {
-  width: 220px;
-  height: 50px;
+  width: 200px;
+  height: 30px;
 }
 .header-title h1 {
   margin: 0 auto;
@@ -57,7 +57,6 @@ h1, h2, h3, p, span {
 
 .header-infos-1 {
   font-weight: bold;
-  font-size: 26px;
   padding: 0 40px;
   text-align: center;
 }
@@ -67,7 +66,6 @@ h1, h2, h3, p, span {
 
 .header-infos-2 {
   font-weight: 300;
-  font-size: 18px;
   text-align: center;
 }
 .header-infos-2 p {
@@ -374,8 +372,8 @@ footer {
   display: flex;
   text-align: left;
 }
-footer .footer-section > h5 {
-  font-weight: 400;
+footer .footer-section .footer-logo-mobile h5 {
+  font-weight: 300;
   font-size: 18px;
   line-height: 26px;
   margin: 10px 0px;
@@ -385,8 +383,21 @@ footer .footer-link {
   flex-direction: row;
   align-items: center;
 }
+footer .footer-link a {
+  outline: none;
+  text-decoration: none;
+  color: white;
+  padding: 7px 0;
+}
+footer .footer-link a p {
+  padding: 0;
+  margin: 0;
+}
 footer .footer-link > p {
   margin: 7px 0 7px 0;
+}
+footer .footer-logo-desktop h5 {
+  display: none;
 }
 
 /*************** version responsive  **********/
@@ -395,9 +406,20 @@ footer .footer-link > p {
   .main-container {
     background: white;
   }
+  .header-title {
+    padding: 30px 0;
+  }
+  .header-title img {
+    width: 220px;
+    height: 40px;
+  }
   .header-infos {
     background: #f6f6f6;
-    padding: 0 20px 0 20px;
+    padding: 10px 20px 10px 20px;
+  }
+  .fonctionnement-step {
+    height: 50px;
+    width: 35%;
   }
   .page-restaurant {
     padding: 40px 20px 20px 20px;
@@ -437,6 +459,13 @@ footer .footer-link > p {
   .main-container {
     width: 100%;
     background: white;
+  }
+  .header-title {
+    padding: 30px 0;
+  }
+  .header-title img {
+    width: 220px;
+    height: 40px;
   }
   .header-infos {
     background: #f6f6f6;
@@ -564,6 +593,9 @@ footer .footer-link > p {
     display: flex;
     flex-direction: row;
     position: absolute;
+  }
+  footer .footer-wrapper .footer-logo-desktop h5 {
+    display: flex;
   }
   footer .gap {
     margin: 0 10px;
