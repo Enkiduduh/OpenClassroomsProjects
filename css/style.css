@@ -22,8 +22,7 @@ h1, h2, h3, p, span {
 /*----------------HEADER------------------*/
 .header-title {
   padding: 10px 0;
-  background: whitesmoke;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+  background: white;
   text-align: center;
   display: flex;
   align-items: center;
@@ -45,7 +44,7 @@ h1, h2, h3, p, span {
 }
 
 .header-location > p {
-  padding: 10px 0px;
+  padding: 15px 0px;
   margin: 0;
   font-weight: bolder;
   font-size: 16px;
@@ -76,22 +75,30 @@ h1, h2, h3, p, span {
 }
 
 .btn-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 25px;
-  border: 2px solid white;
+  height: 50px;
   color: white;
   width: 250px;
   text-align: center;
   margin: 30px auto 20px auto;
   font-weight: bold;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  transition: opacity 2s ease;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.3));
+  transition: box-shadow 1s ease;
+  transition: opacity 1s ease;
   background-image: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
   opacity: 1;
 }
+.btn-navigation p {
+  margin: 0;
+}
 .btn-navigation:hover {
   opacity: 0.5;
-  background-image: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(90deg, rgb(239, 62, 189) 35%, rgb(131, 50, 229) 100%);
+  box-shadow: 0px 3px 15px 1px rgba(0, 0, 0, 0.3);
 }
 
 /**************  MAIN  **************/
@@ -122,7 +129,7 @@ h1, h2, h3, p, span {
   font-size: 16px;
   position: relative;
   left: 4px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  box-shadow: 0px 3px 15px 1px rgba(0, 0, 0, 0.3);
 }
 .fonctionnement-step span {
   padding: 5px 10px;
@@ -131,15 +138,15 @@ h1, h2, h3, p, span {
   color: white;
   background: rgb(147, 86, 220);
   position: absolute;
-  left: -10px;
+  left: -12px;
 }
 .fonctionnement-step i {
   position: absolute;
-  left: 50px;
+  left: 40px;
 }
 .fonctionnement-step p {
   position: absolute;
-  left: 90px;
+  left: 80px;
 }
 
 /******** Restaurants ********/
@@ -278,7 +285,7 @@ h1, h2, h3, p, span {
 .dish-info {
   display: flex;
   align-items: center;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.3));
   justify-content: space-between;
   padding: 10px 10px;
   margin: 10px 0;
@@ -388,6 +395,10 @@ footer .footer-link > p {
   .main-container {
     background: white;
   }
+  .header-infos {
+    background: #f6f6f6;
+    padding: 0 20px 0 20px;
+  }
   .page-restaurant {
     padding: 40px 20px 20px 20px;
     width: 90%;
@@ -427,6 +438,10 @@ footer .footer-link > p {
     width: 100%;
     background: white;
   }
+  .header-infos {
+    background: #f6f6f6;
+    padding: 10px 20px 10px 20px;
+  }
   .header-title2 .fa-arrow-left {
     position: absolute;
     left: 40px;
@@ -435,7 +450,7 @@ footer .footer-link > p {
     width: 250px;
   }
   .fonctionnement {
-    padding: 50px 10% 30px 10%;
+    padding: 30px 10% 30px 10%;
   }
   .fonctionnement .fonctionnement-wrapper {
     max-width: 1000px;
@@ -485,7 +500,7 @@ footer .footer-link > p {
     padding: 10px 20px;
   }
   .card-content .card-infos .card-name p {
-    padding-bottom: 5px;
+    padding-bottom: 0;
   }
   .page-restaurant {
     padding: 40px 20px 20px 20px;
@@ -528,7 +543,14 @@ footer .footer-link > p {
   footer .footer-section {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    position: relative;
+    left: 17%;
+    padding: 30px 0 20px 0;
+  }
+  footer .footer-section .footer-logo-mobile {
+    display: none;
   }
   footer .footer-section h5 {
     font-weight: 400;
@@ -536,16 +558,24 @@ footer .footer-link > p {
     line-height: 26px;
     margin: 10px 0px;
     padding-right: 40px;
+    padding-left: 50px;
+  }
+  footer .footer-wrapper {
+    display: flex;
+    flex-direction: row;
     position: absolute;
-    left: 90%;
+  }
+  footer .gap {
+    margin: 0 10px;
   }
   footer .footer-link {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0 10px;
-    position: relative;
-    left: 40%;
+  }
+  footer .footer-link .fa-solid {
+    padding-right: 10px;
   }
   footer .footer-link p {
     margin: 7px 0 7px 0;

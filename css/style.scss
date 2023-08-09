@@ -30,8 +30,7 @@
   /*----------------HEADER------------------*/
   .header-title {
     padding: 10px 0;
-    background: whitesmoke;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+    background: $secondary-color;
     text-align: center;
     @include d-flex-center;
 
@@ -51,7 +50,7 @@
     background: rgba(234, 234, 234, 1);
   }
   .header-location > p {
-    padding: 10px 0px;
+    padding: 15px 0px;
     margin: 0;
     font-weight: bolder;
     font-size: 16px;
@@ -83,22 +82,28 @@
   }
 
   .btn-navigation {
+    @include d-flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 25px;
-    border: 2px solid $secondary-color;
+    height: 50px;
     color: white;
     width: 250px;
     text-align: center;
     margin: 30px auto 20px auto ;
     font-weight: bold;
     @include d-shadow;
-    transition: opacity 2s ease;
+    transition: box-shadow 1s ease;
+    transition: opacity 1s ease;
     background-image: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%);
     opacity:1;
-
+      p {
+        margin:0;
+      }
     &:hover {
       opacity:0.5;
-      background-image: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%);
-      @include d-shadow;
+      background-image: linear-gradient(90deg, rgb(239, 62, 189) 35%, rgb(131, 50, 229) 100%);
+      box-shadow: 0px 3px 15px 1px  rgba(0, 0, 0, 0.3);
 
     }
   }
@@ -132,7 +137,7 @@
     font-size: 16px;
     position: relative;
     left: 4px;
-    @include d-shadow;
+    box-shadow: 0px 3px 15px 1px  rgba(0, 0, 0, 0.3);
     span {
       padding: 5px 10px;
       margin-right: 20px;
@@ -140,15 +145,15 @@
       color: $secondary-color;
       background: $tertiary-color;
       position: absolute;
-      left: -10px;
+      left: -12px;
    }
       i {
         position: absolute;
-        left: 50px;
+        left: 40px;
     }
     p {
       position: absolute;
-      left: 90px;
+      left: 80px;
     }
   }
 
@@ -367,6 +372,11 @@
   .main-container {
     background: $secondary-color;
   }
+
+  .header-infos {
+    background: $bgd-color-primary;
+    padding: 0 20px 0 20px;
+  }
   .page-restaurant {
     padding: 40px 20px 20px 20px;
     width: 90%;
@@ -416,7 +426,10 @@
     width: 100%;
     background: $secondary-color;
   }
-
+  .header-infos {
+    background: $bgd-color-primary;
+    padding: 10px 20px 10px 20px;
+  }
   .header-title2 {
       .fa-arrow-left {
         position:absolute;
@@ -430,7 +443,7 @@
     }
 
   .fonctionnement {
-    padding: 50px 10% 30px 10%;
+    padding: 30px 10% 30px 10%;
 
       .fonctionnement-wrapper {
         max-width: 1000px;
@@ -489,7 +502,7 @@
 
       .card-name {
         p {
-          padding-bottom: 5px;
+          padding-bottom: 0;
         }
       }
     }
@@ -543,7 +556,14 @@ footer {
 
   .footer-section {
     @include d-flex;
+    justify-content: center;
     width:100%;
+    position:relative;
+    left: 17%;
+    padding:30px 0 20px 0;
+    .footer-logo-mobile {
+      display: none;
+    }
 
     h5 {
       font-weight: 400;
@@ -551,20 +571,30 @@ footer {
       line-height: 26px;
       margin: 10px 0px;
       padding-right:40px;
-      position: absolute;
-      left: 90%;
+      padding-left:50px;
+
     }
 
   }
+  .footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    position:absolute;
 
+
+
+  }
+  .gap {
+    margin: 0 10px;
+  }
   .footer-link {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0 10px;
-    position: relative;
-    left: 40%;
-
+    .fa-solid{
+      padding-right: 10px;
+    }
     p {
       margin: 7px 0 7px 0;
     }
