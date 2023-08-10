@@ -181,6 +181,22 @@ h1, h2, h3, p, span {
   text-decoration: none;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
+  position: relative;
+}
+.card-content .new-label {
+  color: #008786;
+  background: #99e2d0;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  border: 1px solid #99e2d0;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.3));
 }
 
 .card-img img {
@@ -337,17 +353,24 @@ h1, h2, h3, p, span {
 .dish-info .dish-name {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 .dish-info .dish-name p {
   font-weight: bold;
   margin: 0;
   padding: 3px 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .dish-info .dish-name span {
   margin: 0;
   padding: 3px 10px;
   font-weight: 300;
   font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .dish-info .price {
   font-size: 15px;
@@ -358,8 +381,14 @@ h1, h2, h3, p, span {
   left: 0;
   transition: left 330ms, transform 330ms;
   transition-timing-function: linear;
+  display: inline-block;
+  white-space: nowrap;
 }
 
+.move {
+  display: inline-block;
+  white-space: nowrap;
+}
 .move .cube i {
   padding-right: 0px;
 }

@@ -191,6 +191,22 @@
     text-decoration: none;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
+    position: relative;
+    .new-label {
+      color:$label-font;
+      background: $label-background;
+      font-family: $font-stack-secondary;
+      padding: 5px 10px;
+      border: 1px solid $label-background;
+      text-align: center;
+      border-radius: 3px;
+      font-weight: 500;
+      font-size: 14px;
+      position:absolute;
+      top: 20px;
+      right: 20px;
+      @include d-shadow;
+    }
   }
   .card-img {
     img {
@@ -302,16 +318,23 @@
 
   .dish-name {
     @include d-flex-column;
+     min-width: 0;
       p {
         font-weight: bold;
         margin: 0;
         padding: 3px 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
       span {
         margin: 0;
         padding: 3px 10px;
         font-weight: 300;
         font-size: $font-size-text-4;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
 
     }
@@ -324,11 +347,15 @@
       left: 0;
       transition: left 330ms, transform 330ms;
       transition-timing-function: linear;
+      display: inline-block;
+      white-space: nowrap;
 
     }
 
   }
     .move {
+      display: inline-block;
+      white-space: nowrap;
       .cube {
         i {
           padding-right: 0px;
@@ -407,6 +434,7 @@
   .fonctionnement-step {
     height: 50px;
     width:35%;
+
   }
 
   .page-restaurant {
