@@ -21,7 +21,7 @@ h1, h2, h3, p, span {
 
 /*----------------HEADER------------------*/
 .header-title {
-  padding: 10px 0;
+  padding: 20px 0;
   background: white;
   text-align: center;
   display: flex;
@@ -36,18 +36,29 @@ h1, h2, h3, p, span {
   margin: 0 auto;
 }
 
-.header-location {
+#header-location {
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgb(234, 234, 234);
 }
+#header-location .header-location-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+}
 
-.header-location > p {
+.header-location-flex input {
   padding: 15px 0px;
   margin: 0;
   font-weight: bolder;
   font-size: 16px;
+  outline: none;
+  border: none;
+  background: #EAEAEA;
+  text-align: left;
+  width: 150px;
 }
 
 .header-infos {
@@ -214,6 +225,7 @@ h1, h2, h3, p, span {
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
+  position: relative;
 }
 
 .card-name p {
@@ -233,7 +245,7 @@ h1, h2, h3, p, span {
   opacity: 0.5;
   transition: color 2s ease;
 }
-.fa-heart:hover {
+.fa-heart:active {
   color: #FF79DA;
   opacity: 1;
 }

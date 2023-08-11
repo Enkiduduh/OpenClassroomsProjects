@@ -29,7 +29,7 @@
 
   /*----------------HEADER------------------*/
   .header-title {
-    padding: 10px 0;
+    padding: 20px 0;
     background: $secondary-color;
     text-align: center;
     @include d-flex-center;
@@ -45,16 +45,28 @@
 
 
 
-  .header-location {
+  #header-location {
     @include d-flex-center;
     background: rgba(234, 234, 234, 1);
+      .header-location-flex {
+        @include d-flex-center;
+        justify-content: center;
+      }
   }
-  .header-location > p {
+  .header-location-flex {
+   input {
     padding: 15px 0px;
     margin: 0;
     font-weight: bolder;
     font-size: 16px;
+    outline: none;
+    border: none;
+    background: $bgd-color-secondary;
+    text-align: left;
+    width: 150px;
+
   }
+}
   .header-infos {
     background: $bgd-color-primary;
     padding: 30px 20px 50px 20px;
@@ -223,6 +235,7 @@
     @include d-flex;
     justify-content: space-between;
     padding: 15px 20px;
+    position: relative;
   }
 
   .card-name {
@@ -244,7 +257,7 @@
     opacity: 0.5;
     transition : color 2s ease;
 
-      &:hover {
+      &:active {
         color: #FF79DA;
         opacity: 1;
       }
