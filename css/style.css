@@ -170,6 +170,10 @@ h1, h2, h3, p, span {
   align-items: center;
   margin: 0 auto;
 }
+.page-restaurant-title h2 {
+  font-family: "Shrikhand", cursive;
+  padding-right: 20px;
+}
 
 .card-content {
   border-radius: 25px;
@@ -209,13 +213,14 @@ h1, h2, h3, p, span {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px;
+  padding: 15px 20px;
 }
 
 .card-name p {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
+  padding: 0;
 }
 .card-name span {
   font-size: 17px;
@@ -456,13 +461,12 @@ footer .footer-logo-desktop h5 {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
   }
-  .page-restaurant h2 {
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 28px;
-  }
   .page-restaurant-title {
     width: 90%;
+  }
+  .page-restaurant-title h2 {
+    text-align: center;
+    font-family: "Shrikhand";
   }
   .section-dish {
     margin: 0 auto 40px auto;
@@ -567,15 +571,13 @@ footer .footer-logo-desktop h5 {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
   }
-  .page-restaurant h2 {
-    text-align: center;
-    font-size: 28px;
-    padding-right: 20px;
-  }
   .page-restaurant-title {
     width: 90%;
-    justify-content: center;
-    align-items: center;
+  }
+  .page-restaurant-title h2 {
+    text-align: center;
+    font-family: "Shrikhand";
+    padding-right: 20px;
   }
   .section-dish {
     margin: 0 auto 40px auto;
@@ -639,19 +641,19 @@ footer .footer-logo-desktop h5 {
     margin: 7px 0 7px 0;
   }
 }
-/* test */
+/* OVERLAY ANimation LOADER */
 .overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  border: 10px solid #008786;
-  background: #99e2d0;
-  border-radius: 50px;
-  width: 100%;
-  height: 150%;
+  border: 1px solid #008786;
+  background: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
+  height: 1200px;
   animation: fadeinout 3s linear forwards;
   opacity: 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 @keyframes fadeinout {
@@ -660,7 +662,7 @@ footer .footer-logo-desktop h5 {
   }
   99% {
     opacity: 0;
-    height: 200px;
+    height: 300px;
   }
   100% {
     height: 0px;
@@ -670,7 +672,9 @@ footer .footer-logo-desktop h5 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 auto;
+  margin: 20px auto;
+  width: 70%;
+  justify-content: center;
 }
 .title-flex .gear1 {
   width: 50px;
@@ -704,11 +708,14 @@ footer .footer-logo-desktop h5 {
   font-size: 24px;
   font-weight: bold;
   padding: 10px 20px;
+  margin: 10px auto;
+  text-align: center;
 }
 
 .progress {
-  width: 60%;
-  height: 20px;
+  width: 50%;
+  height: 50px;
+  margin: 10px 10px;
   border: 3px solid black;
   border-radius: 50px;
   background: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%) left/0% 100% no-repeat #dbdcef;
@@ -734,19 +741,7 @@ footer .footer-logo-desktop h5 {
   font-weight: bold;
 }
 .progress-flex #barre1 {
-  animation: progress-jgv380 330ms forwards linear;
-}
-.progress-flex #barre2 {
-  animation: progress-jgv380 800ms forwards linear;
-}
-.progress-flex #barre3 {
-  animation: progress-jgv380 1s forwards linear;
-}
-.progress-flex #barre4 {
   animation: progress-jgv380 2s forwards linear;
-}
-.progress-flex #barre5 {
-  animation: progress-jgv380 3s forwards linear;
 }
 
 @keyframes appear {
@@ -759,11 +754,10 @@ footer .footer-logo-desktop h5 {
 }
 .ready {
   text-align: center;
-  font-size: 20px;
   color: white;
-  font-weight: bold;
-  border: 5px solid white;
+  border: 2px solid white;
   border-radius: 50px;
-  padding: 3px 10px;
-  margin: 40px 0;
+  padding: 5px 10px;
+  margin: 40px 20px;
+  background: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
 }/*# sourceMappingURL=style.css.map */
