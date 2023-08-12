@@ -45,6 +45,7 @@
 
 
 
+
   #header-location {
     @include d-flex-center;
     background: rgba(234, 234, 234, 1);
@@ -278,15 +279,13 @@
       img {
         width: 220px;
         height: 50px;
-        left: -20px;
-        position: relative;
     }
       h1 {
         margin: $margin-center;
     }
       .fa-arrow-left {
-        position:relative;
-        left:-70px;
+        position:absolute;
+        left:20px;
     }
   }
 
@@ -341,25 +340,21 @@
     @include d-shadow;
     @include card;
 
-  .dish-name {
+    .dish-name {
     @include d-flex-column;
      min-width: 0;
       p {
         font-weight: bold;
         margin: 0;
         padding: 3px 10px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+        overflow: visible;
       }
       span {
         margin: 0;
         padding: 3px 10px;
         font-weight: 300;
         font-size: $font-size-text-4;
-        text-overflow: ellipsis;
         overflow: hidden;
-        white-space: nowrap;
       }
 
     }
@@ -455,6 +450,8 @@
     background: $bgd-color-primary;
     padding: 10px 20px 10px 20px;
   }
+
+
   .fonctionnement-flex {
     @include d-flex;
   }
@@ -665,6 +662,18 @@
   .dish-info {
     width: 100%;
     margin: 10px auto;
+    .dish-name {
+      p {
+        overflow: hidden;
+        width: 350px;
+      }
+      span {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 350px;
+      }
+    }
   }
 
 

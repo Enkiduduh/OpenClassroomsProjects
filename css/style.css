@@ -1,3 +1,48 @@
+/*     TEST condition en SASS
+$width_dish-info : 800px;
+
+@if ($width_dish-info < 360px) {
+
+  .dish-info {
+    &:hover {
+      .dish-name {
+        p {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 150px;
+        }
+        span {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+@else {
+  .dish-info {
+    &:hover {
+      .dish-name {
+        p {
+          text-overflow: ellipsis;
+          overflow: visible;
+          white-space: nowrap;
+
+        }
+        span {
+          text-overflow: ellipsis;
+          overflow: visible;
+          white-space: nowrap;
+
+        }
+      }
+    }
+  }
+}
+*/
 body {
   background: darkgray;
 }
@@ -263,15 +308,13 @@ h1, h2, h3, p, span {
 .header-title2 img {
   width: 220px;
   height: 50px;
-  left: -20px;
-  position: relative;
 }
 .header-title2 h1 {
   margin: 0 auto;
 }
 .header-title2 .fa-arrow-left {
-  position: relative;
-  left: -70px;
+  position: absolute;
+  left: 20px;
 }
 
 .header-img {
@@ -348,13 +391,24 @@ h1, h2, h3, p, span {
   background: rgb(153, 226, 208);
 }
 .dish-info:hover {
-  text-overflow: ellipsis;
   padding: 0;
   height: 69px;
 }
 .dish-info:hover .dish-name {
   position: relative;
   left: 10px;
+}
+.dish-info:hover .dish-name span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
+}
+.dish-info:hover .dish-name p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
 }
 .dish-info:hover .price {
   position: relative;
@@ -385,18 +439,14 @@ h1, h2, h3, p, span {
   font-weight: bold;
   margin: 0;
   padding: 3px 10px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  overflow: visible;
 }
 .dish-info .dish-name span {
   margin: 0;
   padding: 3px 10px;
   font-weight: 300;
   font-size: 15px;
-  text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
 }
 .dish-info .price {
   font-size: 15px;
@@ -646,6 +696,16 @@ footer .footer-logo-desktop h5 {
   .dish-info {
     width: 100%;
     margin: 10px auto;
+  }
+  .dish-info .dish-name p {
+    overflow: hidden;
+    width: 350px;
+  }
+  .dish-info .dish-name span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 350px;
   }
   /*----------------FOOTER------------------*/
   footer {
