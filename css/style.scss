@@ -99,7 +99,8 @@
     border-radius: 25px;
     height: 50px;
     color: white;
-    width: 250px;
+    min-width: 150px;
+    max-width:220px;
     text-align: center;
     margin: 30px auto 20px auto ;
     font-weight: bold;
@@ -253,25 +254,31 @@
     }
   }
 
-  .fa-heart {
-    color: rgb(208, 208, 208);
-    opacity: 0.5;
-    transition : color 2s ease;
 
-      &:active {
-        color: #FF79DA;
-        opacity: 1;
-      }
-
+  [type="checkbox"] {
+    position:fixed;
+    left:-9999px;
   }
 
+label {
+  display:inline-block;
+  color: rgb(122, 122, 122);
+  opacity: 0.5;
+  transition : color 2s ease;
+}
 
+input:checked + label {
+  display:inline-block;
+  color: rgba(228, 61, 236, 0.5);
+  opacity: 1;
+}
 
+.restaurants-cards > a:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > label:nth-child(2) > i:nth-child(1)
   /******** Page de restaurant *********/
 
   .header-title2 {
     padding: 10px 0;
-    background: whitesmoke;
+    background: $bgd-color-primary;
     border-bottom: 3px solid rgba(0, 0, 0, 0.15);
     text-align: center;
     @include d-flex-center;

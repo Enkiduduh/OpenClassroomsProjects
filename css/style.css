@@ -136,7 +136,8 @@ h1, h2, h3, p, span {
   border-radius: 25px;
   height: 50px;
   color: white;
-  width: 250px;
+  min-width: 150px;
+  max-width: 220px;
   text-align: center;
   margin: 30px auto 20px auto;
   font-weight: bold;
@@ -285,34 +286,41 @@ h1, h2, h3, p, span {
   text-align: left;
 }
 
-.fa-heart {
-  color: rgb(208, 208, 208);
+[type=checkbox] {
+  position: fixed;
+  left: -9999px;
+}
+
+label {
+  display: inline-block;
+  color: rgb(122, 122, 122);
   opacity: 0.5;
   transition: color 2s ease;
 }
-.fa-heart:active {
-  color: #FF79DA;
+
+input:checked + label {
+  display: inline-block;
+  color: rgba(228, 61, 236, 0.5);
   opacity: 1;
 }
 
-/******** Page de restaurant *********/
-.header-title2 {
+.restaurants-cards > a:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > label:nth-child(2) > i:nth-child(1) .header-title2 {
   padding: 10px 0;
-  background: whitesmoke;
+  background: #f6f6f6;
   border-bottom: 3px solid rgba(0, 0, 0, 0.15);
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.header-title2 img {
+.restaurants-cards > a:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > label:nth-child(2) > i:nth-child(1) .header-title2 img {
   width: 220px;
   height: 50px;
 }
-.header-title2 h1 {
+.restaurants-cards > a:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > label:nth-child(2) > i:nth-child(1) .header-title2 h1 {
   margin: 0 auto;
 }
-.header-title2 .fa-arrow-left {
+.restaurants-cards > a:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > label:nth-child(2) > i:nth-child(1) .header-title2 .fa-arrow-left {
   position: absolute;
   left: 20px;
 }
