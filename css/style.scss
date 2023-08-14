@@ -5,7 +5,8 @@
 
 
   body {
-    background: darkgray;
+    padding: 0;
+    margin: 0;
   }
 
 
@@ -106,13 +107,13 @@
     font-weight: bold;
     @include d-shadow;
     transition: box-shadow 1s ease;
-    background-image: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%);
+    background-image: linear-gradient(180deg, rgba(255,121,218,1) 5%, rgba(147,86,220,1) 100%);
 
       p {
         margin:0;
       }
     &:hover {
-      background-image: linear-gradient(90deg, rgb(239, 62, 189) 35%, rgb(131, 50, 229) 100%);
+      background-image: linear-gradient(180deg, rgb(209, 44, 162) 5%, rgb(131, 50, 229) 100%);
       box-shadow: 0px 3px 15px 1px  rgba(0, 0, 0, 0.3);
 
     }
@@ -156,7 +157,7 @@
       background: $tertiary-color;
       position: absolute;
       left: -12px;
-   }
+    }
       i {
         position: absolute;
         left: 40px;
@@ -164,6 +165,11 @@
     p {
       position: absolute;
       left: 80px;
+    }
+    &:hover {
+      i {
+        color: $tertiary-color;
+      }
     }
   }
 
@@ -262,7 +268,6 @@
 
 .heartfav {
   display:inline-block;
-  color: rgb(122, 122, 122);
   opacity: 0.5;
   transition : color 2s ease;
 }
@@ -394,6 +399,8 @@ input:checked + .heartfav {
       width: 100%;
     }
 
+
+
     input:checked + .dishanimation {
       display:inline-block;
       width: 100%;
@@ -409,6 +416,7 @@ input:checked + .heartfav {
               white-space: nowrap;
               width: 150px;
             }
+
             p {
               text-overflow: ellipsis;
               overflow: hidden;
@@ -580,7 +588,50 @@ input:checked + .heartfav {
     margin: 10px auto;
   }
 
+  input:checked + .dishanimation {
+    display:inline-block;
+    width: 100%;
+    .dish-info {
+      padding: 0;
+      height: 69px;
+        .dish-name {
+          position:relative;
+          left: 10px;
+          span {
+            overflow: visible;
+          }
+          p {
+            overflow: visible;
+
+          }
+        }
+        .price {
+          position:relative;
+          left: -40px;
+          transform: translateX(-100%);
+        }
+
+        .cube {
+          display: inline-block;
+          align-items: center;
+          padding: 25px 20px;
+          color: $secondary-color;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          background:rgba(153, 226, 208, 1);
+          left: 100%;
+          transform: translateX(-100%);
+
+        }
+
+        .move {
+          @include d-flex;
+        }
+      }
+    }
 }
+
+
 
 /* Notebook version superior than 1023px) */
 @media screen and (min-width: 1024px)  {
@@ -733,6 +784,47 @@ input:checked + .heartfav {
     }
   }
 
+  input:checked + .dishanimation {
+    display:inline-block;
+    width: 100%;
+    .dish-info {
+      padding: 0;
+      height: 69px;
+        .dish-name {
+          position:relative;
+          left: 10px;
+          span {
+            overflow: visible;
+          }
+          p {
+            overflow: visible;
+
+          }
+        }
+        .price {
+          position:relative;
+          left: -40px;
+          transform: translateX(-100%);
+        }
+
+        .cube {
+          display: inline-block;
+          align-items: center;
+          padding: 25px 20px;
+          color: $secondary-color;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          background:rgba(153, 226, 208, 1);
+          left: 100%;
+          transform: translateX(-100%);
+
+        }
+
+        .move {
+          @include d-flex;
+        }
+      }
+    }
 
   /*----------------FOOTER------------------*/
 
