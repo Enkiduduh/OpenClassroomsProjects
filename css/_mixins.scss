@@ -41,7 +41,7 @@
       border-bottom-right-radius: 15px;
       background:rgba(153, 226, 208, 1);
     }
-    &:hover {
+    /* &:hover {
       padding: 0;
       height: 69px;
         .dish-name {
@@ -82,7 +82,7 @@
         .move {
           @include d-flex;
         }
-  }
+  }*/
 }
 /*     TEST condition en SASS
 $width_dish-info : 800px;
