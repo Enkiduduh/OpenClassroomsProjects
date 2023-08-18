@@ -297,10 +297,24 @@ h1, h2, h3, p, span {
 
 .heartfav {
   display: inline-block;
-  opacity: 0.5;
+  position: relative;
+  opacity: 0, 5;
   transition: color 2s ease;
 }
 
+/*
+.heartfav-off {
+   i {
+  display:inline-block;
+  position:absolute;
+  right: 40px;
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+   }
+    &:hover {
+    opacity: 0;
+  }
+}    */
 input:checked + .heartfav {
   display: inline-block;
   color: rgba(228, 61, 236, 0.5);
