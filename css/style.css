@@ -233,7 +233,7 @@ h1, h2, h3, p, span {
 }
 .page-restaurant-title h2 {
   font-family: "Shrikhand", cursive;
-  padding-right: 20px;
+  padding-right: 70px;
 }
 
 .card-content {
@@ -298,8 +298,33 @@ h1, h2, h3, p, span {
 .heartfav {
   display: inline-block;
   position: relative;
-  opacity: 0, 5;
-  transition: color 2s ease;
+  transition: background-image 2s ease;
+}
+.heartfav .fav_on {
+  display: inline-block;
+  position: absolute;
+  right: 40px;
+  bottom: -15px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../image/coeur_vide.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+input:checked + .heartfav {
+  display: inline-block;
+}
+input:checked + .heartfav .fav_on {
+  background-image: url("../image/coeur_plein.png");
+  color: rgb(131, 50, 229);
+}
+
+.card-fav .heartfav .fav_on {
+  position: relative;
+  right: 20px;
+  bottom: 0px;
 }
 
 /*
@@ -312,15 +337,9 @@ h1, h2, h3, p, span {
   color: rgba(0, 0, 0, 0.5);
    }
     &:hover {
-    opacity: 0;
+    opacity: 0.7;
   }
-}    */
-input:checked + .heartfav {
-  display: inline-block;
-  color: rgba(228, 61, 236, 0.5);
-  opacity: 1;
-}
-
+} */
 /******** Page de restaurant *********/
 .header-title2 {
   padding: 10px 0;
@@ -356,8 +375,8 @@ input:checked + .heartfav {
   margin-top: -60px;
   background: #f6f6f6;
   position: relative;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 .page-restaurant h2 {
   margin: 0;
@@ -642,15 +661,23 @@ footer .footer-logo-desktop h5 {
     margin: -40px auto 0 auto;
     background: #f6f6f6;
     position: relative;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
   }
   .page-restaurant-title {
     width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   .page-restaurant-title h2 {
-    text-align: center;
     font-family: "Shrikhand";
+  }
+  .page-restaurant-title .heartfav .fav_on {
+    position: relative;
+    right: -10px;
+    bottom: 0px;
   }
   .section-dish {
     margin: 0 auto 40px auto;
@@ -790,16 +817,24 @@ footer .footer-logo-desktop h5 {
     margin: -40px auto 0 auto;
     background: #f6f6f6;
     position: relative;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
   }
   .page-restaurant-title {
     width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .page-restaurant-title h2 {
     text-align: center;
     font-family: "Shrikhand";
     padding-right: 20px;
+  }
+  .page-restaurant-title .heartfav .fav_on {
+    position: relative;
+    right: -10px;
+    bottom: 0px;
   }
   .section-dish {
     margin: 0 auto 40px auto;
@@ -1002,6 +1037,7 @@ footer .footer-logo-desktop h5 {
   align-items: center;
   justify-content: space-around;
   width: 600px;
+  padding-top: 40px;
 }
 .progress-flex p {
   width: 40%;
