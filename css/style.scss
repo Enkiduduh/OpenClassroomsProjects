@@ -302,20 +302,6 @@ input:checked {
   }
 }
 
-/*
-.heartfav-off {
-   i {
-  display:inline-block;
-  position:absolute;
-  right: 40px;
-  opacity: 1;
-  color: rgba(0, 0, 0, 0.5);
-   }
-    &:hover {
-    opacity: 0.7;
-  }
-} */
-
 
 
   /******** Page de restaurant *********/
@@ -366,13 +352,13 @@ input:checked {
   }
 
   .section-dish-entree {
-    animation: appear-resto 6s forwards ease-in-out;
+    animation: appear-resto 3s forwards ease-in-out;
   }
   .section-dish-plat {
-    animation: appear-resto 12s forwards ease-in-out;
+    animation: appear-resto 6s forwards ease-in-out;
   }
   .section-dish-dessert {
-    animation: appear-resto 18s forwards ease-in-out;
+    animation: appear-resto 9s forwards ease-in-out;
   }
 
   .section-dish-title {
