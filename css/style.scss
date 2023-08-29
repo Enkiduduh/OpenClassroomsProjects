@@ -357,6 +357,22 @@ input:checked {
     animation: appear-resto 9s forwards ease-in-out;
   }
 
+  @keyframes appear {
+    from {
+       opacity: 0;
+    }
+    to {
+      opacity: 1;
+   }
+  }
+  @keyframes appear-resto {
+    from {
+       opacity: 0;
+    }
+    to {
+      opacity: 1;
+   }
+  }
   .section-dish-title {
     border-bottom: 3px solid rgba(153, 226, 208, 1);
     padding-bottom: 0px;
@@ -397,9 +413,7 @@ input:checked {
       right: 10px;
       font-weight: bold;
       left: 0;
-      transition: left 330ms, transform 330ms;
-      transition-timing-function: linear;
-      display: inline-block;
+      transition: left 330ms, transform 330ms linear ;
       white-space: nowrap;
 
     }
@@ -961,42 +975,7 @@ footer {
   width: 70%;
   justify-content: center;
 
-  .gear1{
-    width: 50px;
-    height: 50px;
-    animation: rotation1 3s infinite linear;
-  }
-  .gear2 {
-    width: 30px;
-    height: 30px;
-    animation: rotation2 3s infinite linear;
-  }
-}
 
-@keyframes rotation1 {
-from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-@keyframes rotation2 {
-  from {
-      transform: rotate(359deg);
-    }
-    to {
-      transform: rotate(0deg);
-    }
-  }
-
-.title > p {
-  color: black;
-  font-size:24px;
-  font-weight: bold;
-  padding: 10px 20px;
-  margin: 10px auto;
-  text-align: center;
 }
 
 .progress {
@@ -1009,7 +988,7 @@ from {
       #dbdcef;
     }
 
-@keyframes progress-jgv380 {
+@keyframes progress-barre {
   100% {
      background-size: 100% 100%;
   }
@@ -1029,18 +1008,11 @@ from {
     font-weight: bold;
   }
   #barre1 {
-    animation: progress-jgv380 2s forwards linear;
+    animation: progress-barre 2s forwards linear;
   }
 }
 
-@keyframes appear {
-  from {
-     opacity: 0;
-  }
-  to {
-    opacity: 1;
- }
-}
+
 
 .ready {
   text-align: center;
@@ -1050,14 +1022,4 @@ from {
   padding: 5px 10px;
   margin: 40px 20px;
   background: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%);
-}
-
-
-@keyframes appear-resto {
-  from {
-     opacity: 0;
-  }
-  to {
-    opacity: 1;
- }
 }

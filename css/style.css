@@ -389,6 +389,22 @@ input:checked + .heartfav .fav_on {
   animation: appear-resto 9s forwards ease-in-out;
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appear-resto {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .section-dish-title {
   border-bottom: 3px solid rgb(153, 226, 208);
   padding-bottom: 0px;
@@ -491,9 +507,7 @@ input:checked + .heartfav .fav_on {
   right: 10px;
   font-weight: bold;
   left: 0;
-  transition: left 330ms, transform 330ms;
-  transition-timing-function: linear;
-  display: inline-block;
+  transition: left 330ms, transform 330ms linear;
   white-space: nowrap;
 }
 
@@ -971,41 +985,6 @@ footer .footer-logo-desktop h5 {
   width: 70%;
   justify-content: center;
 }
-.title-flex .gear1 {
-  width: 50px;
-  height: 50px;
-  animation: rotation1 3s infinite linear;
-}
-.title-flex .gear2 {
-  width: 30px;
-  height: 30px;
-  animation: rotation2 3s infinite linear;
-}
-
-@keyframes rotation1 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-@keyframes rotation2 {
-  from {
-    transform: rotate(359deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-.title > p {
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 10px 20px;
-  margin: 10px auto;
-  text-align: center;
-}
 
 .progress {
   width: 50%;
@@ -1016,7 +995,7 @@ footer .footer-logo-desktop h5 {
   background: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%) left/0% 100% no-repeat #dbdcef;
 }
 
-@keyframes progress-jgv380 {
+@keyframes progress-barre {
   100% {
     background-size: 100% 100%;
   }
@@ -1037,17 +1016,9 @@ footer .footer-logo-desktop h5 {
   font-weight: bold;
 }
 .progress-flex #barre1 {
-  animation: progress-jgv380 2s forwards linear;
+  animation: progress-barre 2s forwards linear;
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .ready {
   text-align: center;
   color: white;
@@ -1056,13 +1027,4 @@ footer .footer-logo-desktop h5 {
   padding: 5px 10px;
   margin: 40px 20px;
   background: linear-gradient(90deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
-}
-
-@keyframes appear-resto {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }/*# sourceMappingURL=style.css.map */
