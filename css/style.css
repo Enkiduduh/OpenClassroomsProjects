@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*     TEST condition en SASS
 $width_dish-info : 800px;
 
@@ -43,6 +44,7 @@ $width_dish-info : 800px;
   }
 }
 */
+/* ------------ Structure générale -------------- */
 body {
   padding: 0;
   margin: 0;
@@ -65,7 +67,7 @@ h1, h2, h3, p, span {
   margin: 0 auto;
 }
 
-/*----------------HEADER------------------*/
+/*----------------HEADER MOBILE------------------*/
 .header-title {
   padding: 20px 0;
   background: white;
@@ -82,6 +84,7 @@ h1, h2, h3, p, span {
   margin: 0 auto;
 }
 
+/*----------HEADER MOBILE--INPUT LOCALISATION---------*/
 #header-location {
   display: flex;
   align-items: center;
@@ -298,7 +301,7 @@ h1, h2, h3, p, span {
 .heartfav {
   display: inline-block;
   position: relative;
-  transition: background-image 2s ease;
+  transition: background-image 1s ease;
 }
 .heartfav .fav_on {
   display: inline-block;

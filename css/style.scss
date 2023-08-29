@@ -3,7 +3,7 @@
 @import 'variables';
 
 
-
+/* ------------ Structure générale -------------- */
   body {
     padding: 0;
     margin: 0;
@@ -25,16 +25,15 @@
   .main-container {
     max-width: 100%;
     margin: $margin-center;
-
   }
 
-  /*----------------HEADER------------------*/
+
+  /*----------------HEADER MOBILE------------------*/
   .header-title {
     padding: 20px 0;
     background: $secondary-color;
     text-align: center;
     @include d-flex-center;
-
       img {
         width: 200px;
         height: 30px;
@@ -43,10 +42,7 @@
         margin: $margin-center;
     }
   }
-
-
-
-
+/*----------HEADER MOBILE--INPUT LOCALISATION---------*/
   #header-location {
     @include d-flex-center;
     background: rgba(234, 234, 234, 1);
@@ -55,6 +51,7 @@
         justify-content: center;
       }
   }
+
   .header-location-flex {
    input {
     padding: 15px 0px;
@@ -87,7 +84,6 @@
   .header-infos-2 {
     font-weight: 300;
     text-align: center;
-
       p {
         margin: $margin-center;
     }
@@ -269,7 +265,7 @@
 .heartfav {
   display:inline-block;
   position:relative;
-  transition : background-image 2s ease;
+  transition : background-image 1s ease;
   .fav_on {
     display:inline-block;
     position:absolute;
