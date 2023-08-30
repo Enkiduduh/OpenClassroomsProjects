@@ -4,19 +4,14 @@
 
 
 /* ------------ Structure générale -------------- */
+html {
+  overflow-x: hidden;
+}
   body {
     padding: 0;
     margin: 0;
   }
 
-
-  h4, h5 {
-    font-family: $font-stack-primary;
-  }
-
-  h1, h2, h3, p, span {
-    font-family: $font-stack-secondary;
-  }
 
   .fa-solid {
     padding-right: 20px;
@@ -109,7 +104,7 @@
         margin:0;
       }
     &:hover {
-      background-image: linear-gradient(180deg, rgb(209, 44, 162) 5%, rgb(131, 50, 229) 100%);
+      background-image: linear-gradient(180deg, rgb(255, 173, 232) 5%, rgb(180, 142, 227) 100%);
       box-shadow: 0px 3px 15px 1px  rgba(0, 0, 0, 0.3);
 
     }
@@ -945,7 +940,7 @@ footer {
   display :flex;
   flex-direction: column;
   align-items:center;
-  margin: 0 auto;
+  margin: 0 ;
   border: 1px solid $label-font;
   background: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%);
   height: 1200px;
@@ -978,22 +973,13 @@ footer {
 
 }
 
-.progress {
-  width: 50%;
-  height: 50px;
-  margin: 10px 10px;
-  border:3px solid black;
-  border-radius:50px;
-  background: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%) left/0% 100% no-repeat
-      #dbdcef;
-    }
+
 
 @keyframes progress-barre {
   100% {
      background-size: 100% 100%;
   }
 }
-
 .progress-flex {
   @include d-flex;
   align-items: center;
@@ -1011,8 +997,6 @@ footer {
     animation: progress-barre 2s forwards linear;
   }
 }
-
-
 
 .ready {
   text-align: center;
