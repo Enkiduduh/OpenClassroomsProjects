@@ -594,27 +594,21 @@ body {
 .dish-info .dish-name {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
 }
 .dish-info .dish-name p {
   font-weight: bold;
   margin: 0;
   padding: 3px 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-  text-overflow: ellipsis;
-  min-width: 0;
 }
 .dish-info .dish-name span {
   margin: 0;
   padding: 3px 10px;
   font-weight: 300;
   font-size: 15px;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-  text-overflow: ellipsis;
-  min-width: 0;
 }
 .dish-info .move {
   position: relative;
@@ -885,20 +879,6 @@ footer .footer-logo-desktop h5 {
   .section-dish-title {
     border-bottom: 3px solid rgb(153, 226, 208);
     width: 40px;
-  }
-  .dish-info {
-    width: 100%;
-    margin: 10px auto;
-  }
-  .dish-info .dish-name p {
-    overflow: hidden;
-    width: 350px;
-  }
-  .dish-info .dish-name span {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 350px;
   }
   /*----------------FOOTER------------------*/
   footer {

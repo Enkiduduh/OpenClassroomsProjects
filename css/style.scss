@@ -294,16 +294,15 @@ html {
 
     .dish-name {
     @include d-flex-column;
+    overflow: hidden;
+    white-space: nowrap;
+    display:inline-block;
+    text-overflow: ellipsis;
 
       p {
         font-weight: bold;
         margin: 0;
         padding: 3px 10px;
-        overflow: hidden;
-        white-space: nowrap;
-        display: inline-block;
-        text-overflow: ellipsis;
-        min-width: 0;
        }
 
       span {
@@ -311,11 +310,6 @@ html {
         padding: 3px 10px;
         font-weight: 300;
         font-size: $font-size-text-4;
-        overflow: hidden;
-        white-space: nowrap;
-        display: inline-block;
-        text-overflow: ellipsis;
-        min-width: 0;
 
       }
     }
@@ -642,24 +636,8 @@ html {
   .section-dish-title {
     border-bottom: 3px solid rgba(153, 226, 208, 1);
     width: 40px;
+  }
 
-  }
-  .dish-info {
-    width: 100%;
-    margin: 10px auto;
-    .dish-name {
-      p {
-        overflow: hidden;
-        width: 350px;
-      }
-      span {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        width: 350px;
-      }
-    }
-  }
 
   /*----------------FOOTER------------------*/
 
