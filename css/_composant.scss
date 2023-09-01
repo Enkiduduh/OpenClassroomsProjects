@@ -1,4 +1,50 @@
-// Barre de progression
+@import 'mixins';
+@import 'variables';
+
+///////////////////////////////////////////////
+//                ANIMATION                  //
+///////////////////////////////////////////////
+
+
+//              OVERLAY LOADER               //
+ .overlay {
+  display :flex;
+  flex-direction: column;
+  align-items:center;
+  margin: 0 ;
+  border: 1px solid $label-font;
+  background: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%);
+  height: 1200px;
+  animation: fadeinout 3s linear forwards;
+  opacity: 0;
+  border-bottom-left-radius:30px;
+  border-bottom-right-radius:30px;
+}
+@keyframes fadeinout {
+  50% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    height: 300px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+.ready {
+  text-align: center;
+  color : $secondary-color;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 5px 10px;
+  margin: 40px 20px;
+  background: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%);
+}
+//             OVERLAY LOADER                //
+
+//      BARRE DE PROGRESSION LOADER          //
 .progress {
   width: 50%;
   height: 50px;
@@ -8,3 +54,117 @@
   background: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%) left/0% 100% no-repeat
       #dbdcef;
     }
+
+    @keyframes progress-barre {
+      100% {
+         background-size: 100% 100%;
+      }
+    }
+    .progress-flex {
+      @include d-flex;
+      align-items: center;
+      justify-content: space-around;
+      width : 600px;
+      padding-top: 40px;
+      p {
+        width: 40%;
+        text-align: right;
+        color: $secondary-color;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      #barre1 {
+        animation: progress-barre 2s forwards linear;
+      }
+    }
+//      BARRE DE PROGRESSION LOADER          //
+
+
+//   COEUR FAVORIS SUR TOUTES LES PAGES      //
+.fav_on {
+  h2 {
+    position:relative;
+    bottom : 20px;
+    left: -25px;
+    i.fa-heart:nth-child(1) {
+      z-index: 1;
+      transition: opacity 1s linear;
+      opacity: 1;
+      position:absolute;
+      bottom: -20px;
+    }
+    i.fa-heart:nth-child(2) {
+      opacity: 0;
+      transition: opacity 1s linear;
+      z-index: 2;
+      position:absolute;
+      bottom: -20px;
+      background: linear-gradient(180deg, rgba(147,86,220,1) 5%, rgba(255,121,218,1) 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  h2:hover {
+    i.fa-heart:nth-child(1) {
+      opacity: 0;
+    }
+    i.fa-heart:nth-child(2) {
+      display: inline-block;
+      opacity: 1;
+      background: linear-gradient(180deg, rgba(147,86,220,1) 5%, rgba(255,121,218,1) 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+//   COEUR FAVORIS SUR TOUTES LES PAGES      //
+
+
+//      BOUTON DE NAVIGATION / COMMANDE      //
+.btn-navigation {
+  @include d-flex;
+  justify-content: center;
+  width: 250px;
+  align-items: center;
+  border-radius: 25px;
+  height: 50px;
+  color: white;
+  min-width: 150px;
+  max-width:220px;
+  text-align: center;
+  margin: 30px auto 20px auto ;
+  font-weight: bold;
+  @include d-shadow;
+  transition: box-shadow 1s ease;
+  background-image: linear-gradient(180deg, rgba(255,121,218,1) 5%, rgba(147,86,220,1) 100%);
+    p {
+      margin:0;
+    }
+  &:hover {
+    background-image: linear-gradient(180deg, rgb(255, 173, 232) 5%, rgb(180, 142, 227) 100%);
+    box-shadow: 0px 3px 15px 1px  rgba(0, 0, 0, 0.3);
+  }
+}
+//      BOUTON DE NAVIGATION / COMMANDE      //
+
+
+//    APPARITION DES PLATS AVEC UN DELAI     //
+.section-dish-entree {
+  animation: appear-resto 3s forwards ease-in-out;
+}
+.section-dish-plat {
+  animation: appear-resto 6s forwards ease-in-out;
+}
+.section-dish-dessert {
+  animation: appear-resto 9s forwards ease-in-out;
+}
+
+@keyframes appear-resto {
+  from {
+     opacity: 0;
+  }
+  to {
+    opacity: 1;
+ }
+}
+//    APPARITION DES PLATS AVEC UN DELAI     //
