@@ -21,7 +21,6 @@ html {
     margin: $margin-center;
   }
 
-
   /*----------------HEADER MOBILE------------------*/
   .header-title {
     padding: 20px 0;
@@ -231,12 +230,6 @@ html {
   }
 
 
-
-
-
-
-
-
   /******** Page de restaurant *********/
 
   .header-title2 {
@@ -299,22 +292,31 @@ html {
     @include d-shadow;
     @include card;
 
-
     .dish-name {
     @include d-flex-column;
-     min-width: 0;
+
       p {
         font-weight: bold;
         margin: 0;
         padding: 3px 10px;
-        overflow: visible;
-      }
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        text-overflow: ellipsis;
+        min-width: 0;
+       }
+
       span {
         margin: 0;
         padding: 3px 10px;
         font-weight: 300;
         font-size: $font-size-text-4;
         overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        text-overflow: ellipsis;
+        min-width: 0;
+
       }
     }
     .move {
@@ -357,58 +359,6 @@ html {
   }
 
 
-
-
-
-/*
-    input:checked + .dishanimation {
-      display:inline-block;
-      width: 100%;
-      .dish-info {
-        padding: 0;
-        height: 69px;
-          .dish-name {
-            position:relative;
-            left: 10px;
-            span {
-              text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: nowrap;
-              width: 150px;
-            }
-
-            p {
-              text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: nowrap;
-              width: 150px;
-            }
-          }
-          .price {
-            position:relative;
-            left: -40px;
-            transform: translateX(-100%);
-          }
-
-          .cube {
-            display: inline-block;
-            align-items: center;
-            padding: 25px 20px;
-            color: $secondary-color;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            background:rgba(153, 226, 208, 1);
-            left: 100%;
-            transform: translateX(-100%);
-
-          }
-
-          .move {
-            @include d-flex;
-          }
-    }
-    }
-*/
   /*----------------FOOTER------------------*/
   footer {
     background: $bgd-color-footer;
@@ -545,60 +495,12 @@ html {
   .section-dish {
     margin: 0 auto 40px auto;
     width: 90%;
-
   }
 
   .section-dish-title {
     border-bottom: 3px solid rgba(153, 226, 208, 1);
     width: 40px;
-
   }
-  .dish-info {
-    width: 100%;
-    margin: 10px auto;
-  }
-
-  input:checked + .dishanimation {
-    display:inline-block;
-    width: 100%;
-    .dish-info {
-      padding: 0;
-      height: 69px;
-        .dish-name {
-          position:relative;
-          left: 10px;
-          span {
-            overflow: visible;
-          }
-          p {
-            overflow: visible;
-
-          }
-        }
-        .price {
-          position:relative;
-          left: -40px;
-          transform: translateX(-100%);
-        }
-
-        .cube {
-          display: inline-block;
-          align-items: center;
-          padding: 25px 20px;
-          color: $secondary-color;
-          border-top-right-radius: 15px;
-          border-bottom-right-radius: 15px;
-          background:rgba(153, 226, 208, 1);
-          left: 100%;
-          transform: translateX(-100%);
-
-        }
-
-        .move {
-          @include d-flex;
-        }
-      }
-    }
 }
 
 
@@ -758,48 +660,6 @@ html {
       }
     }
   }
-
-  input:checked + .dishanimation {
-    display:inline-block;
-    width: 100%;
-    .dish-info {
-      padding: 0;
-      height: 69px;
-        .dish-name {
-          position:relative;
-          left: 10px;
-          span {
-            overflow: visible;
-          }
-          p {
-            overflow: visible;
-
-          }
-        }
-        .price {
-          position:relative;
-          left: -40px;
-          transform: translateX(-100%);
-        }
-
-        .cube {
-          display: inline-block;
-          align-items: center;
-          padding: 25px 20px;
-          color: $secondary-color;
-          border-top-right-radius: 15px;
-          border-bottom-right-radius: 15px;
-          background:rgba(153, 226, 208, 1);
-          left: 100%;
-          transform: translateX(-100%);
-
-        }
-
-        .move {
-          @include d-flex;
-        }
-      }
-    }
 
   /*----------------FOOTER------------------*/
 

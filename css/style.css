@@ -594,13 +594,16 @@ body {
 .dish-info .dish-name {
   display: flex;
   flex-direction: column;
-  min-width: 0;
 }
 .dish-info .dish-name p {
   font-weight: bold;
   margin: 0;
   padding: 3px 10px;
-  overflow: visible;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 .dish-info .dish-name span {
   margin: 0;
@@ -608,6 +611,10 @@ body {
   font-weight: 300;
   font-size: 15px;
   overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 .dish-info .move {
   position: relative;
@@ -645,55 +652,6 @@ body {
   left: -50px;
 }
 
-/*
-    input:checked + .dishanimation {
-      display:inline-block;
-      width: 100%;
-      .dish-info {
-        padding: 0;
-        height: 69px;
-          .dish-name {
-            position:relative;
-            left: 10px;
-            span {
-              text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: nowrap;
-              width: 150px;
-            }
-
-            p {
-              text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: nowrap;
-              width: 150px;
-            }
-          }
-          .price {
-            position:relative;
-            left: -40px;
-            transform: translateX(-100%);
-          }
-
-          .cube {
-            display: inline-block;
-            align-items: center;
-            padding: 25px 20px;
-            color: $secondary-color;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            background:rgba(153, 226, 208, 1);
-            left: 100%;
-            transform: translateX(-100%);
-
-          }
-
-          .move {
-            @include d-flex;
-          }
-    }
-    }
-*/
 /*----------------FOOTER------------------*/
 footer {
   background: #353535;
@@ -815,48 +773,6 @@ footer .footer-logo-desktop h5 {
   .section-dish-title {
     border-bottom: 3px solid rgb(153, 226, 208);
     width: 40px;
-  }
-  .dish-info {
-    width: 100%;
-    margin: 10px auto;
-  }
-  input:checked + .dishanimation {
-    display: inline-block;
-    width: 100%;
-  }
-  input:checked + .dishanimation .dish-info {
-    padding: 0;
-    height: 69px;
-  }
-  input:checked + .dishanimation .dish-info .dish-name {
-    position: relative;
-    left: 10px;
-  }
-  input:checked + .dishanimation .dish-info .dish-name span {
-    overflow: visible;
-  }
-  input:checked + .dishanimation .dish-info .dish-name p {
-    overflow: visible;
-  }
-  input:checked + .dishanimation .dish-info .price {
-    position: relative;
-    left: -40px;
-    transform: translateX(-100%);
-  }
-  input:checked + .dishanimation .dish-info .cube {
-    display: inline-block;
-    align-items: center;
-    padding: 25px 20px;
-    color: white;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background: rgb(153, 226, 208);
-    left: 100%;
-    transform: translateX(-100%);
-  }
-  input:checked + .dishanimation .dish-info .move {
-    display: flex;
-    align-items: center;
   }
 }
 /* Notebook version superior than 1023px) */
@@ -983,44 +899,6 @@ footer .footer-logo-desktop h5 {
     overflow: hidden;
     white-space: nowrap;
     width: 350px;
-  }
-  input:checked + .dishanimation {
-    display: inline-block;
-    width: 100%;
-  }
-  input:checked + .dishanimation .dish-info {
-    padding: 0;
-    height: 69px;
-  }
-  input:checked + .dishanimation .dish-info .dish-name {
-    position: relative;
-    left: 10px;
-  }
-  input:checked + .dishanimation .dish-info .dish-name span {
-    overflow: visible;
-  }
-  input:checked + .dishanimation .dish-info .dish-name p {
-    overflow: visible;
-  }
-  input:checked + .dishanimation .dish-info .price {
-    position: relative;
-    left: -40px;
-    transform: translateX(-100%);
-  }
-  input:checked + .dishanimation .dish-info .cube {
-    display: inline-block;
-    align-items: center;
-    padding: 25px 20px;
-    color: white;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background: rgb(153, 226, 208);
-    left: 100%;
-    transform: translateX(-100%);
-  }
-  input:checked + .dishanimation .dish-info .move {
-    display: flex;
-    align-items: center;
   }
   /*----------------FOOTER------------------*/
   footer {
