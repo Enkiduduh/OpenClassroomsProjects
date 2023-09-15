@@ -645,6 +645,9 @@ body {
 .dish-info:hover .move {
   left: -50px;
 }
+.dish-info:hover .dish-name {
+  width: 70%;
+}
 
 /*----------------FOOTER------------------*/
 footer {
