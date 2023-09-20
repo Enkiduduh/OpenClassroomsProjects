@@ -688,6 +688,9 @@ footer .footer-logo-desktop h5 {
 /*************** version responsive  **********/
 /* Medium Version Tablette superior than 767,98px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    overflow-x: hidden;
+  }
   .main-container {
     background: white;
   }
@@ -774,6 +777,9 @@ footer .footer-logo-desktop h5 {
 }
 /* Notebook version superior than 1023px) */
 @media screen and (min-width: 1024px) {
+  html {
+    overflow-x: hidden;
+  }
   * {
     box-sizing: border-box;
   }
