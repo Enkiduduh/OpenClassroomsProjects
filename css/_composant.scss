@@ -46,11 +46,12 @@
 
 //      BARRE DE PROGRESSION LOADER          //
 .progress {
-  width: 50%;
-  height: 50px;
+  width: 40%;
+  height: 30px;
   margin: 10px 10px;
   border:3px solid black;
   border-radius:50px;
+  overflow: hidden;
   background: linear-gradient(90deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%) left/0% 100% no-repeat
       #dbdcef;
     }
@@ -64,10 +65,11 @@
       @include d-flex;
       align-items: center;
       justify-content: space-around;
-      width : 600px;
+      width : 300px;
       padding-top: 40px;
+      overflow: hidden;
       p {
-        width: 40%;
+        width: 30%;
         text-align: right;
         color: $secondary-color;
         font-size: 18px;
